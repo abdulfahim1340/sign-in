@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/game.css">
+  </head>
+<body>
+  <div class="container ">
+    <div class="d-flex justify-content-center align-items-center flex-column">
+        <button id="start" onclick="startgame()" class="text-center p-5 m-5" name="buttom"><h1>Play Game</h1></button>
+    </div>
+
+    <div class="row">
+      <div class="col-6 d-flex justify-content-center align-items-center flex-column">
+        <h2>first player</h2>
+        <img id="dis1" src="1.png" width="200" alt="">
+      </div>
+      <div class="col-6 d-flex justify-content-center align-items-center flex-column">
+        <h2>second player</h2>
+        <img id="dis2" src="2.png" width="200" alt="">
+      </div>
+    </div>
+    <h4 id="result" class="text-center p-3 text-danger"></h4>
+    </div>
+<script type="text/javascript">
+function startgame(){
+  var start=document.querySelector("#start");
+  var player1=document.querySelector("#dis1");
+  var player2=document.querySelector("#dis2");
+  var result=document.querySelector("#result");
+  var randomNumber1=Math.floor(Math.random()*6)+1;
+  var randomNumber2=Math.floor(Math.random()*6)+1;
+  var imagesAddress=randomNumber1 + ".png";
+  player1dis.setAttribute("src", imagesAddress1);
+  var imagesAddress=randomNumber2+".png";
+  player2dis.setAttribute("src", imagesAddress2);
+  if(randomNumber1>randomNumber2){
+result.innerText="first player win!";
+}else if(randomNumber2>randomNumber1){
+  result.innerText="second player win!";
+}else {
+  result.innerText="game over";
+}
+}
+</script>
+</body>
+</html>

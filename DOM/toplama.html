@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Toplama</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<div class="container d-flex justify-content-center align-item-center">
+  <span class="hesaplama">
+    <h1>Toplama Islem Oyunu</h1>
+    <span id="ilksayi">10</span>
+    <span id="islem">+</span>
+    <span id="ikincisayi">30</span>
+    <span>=</span>
+    <input type="text" name="" value="">
+    <button onclick="hesapla()"type="button" name="button">Cevapla</button>
+    <div id="emoji" class="text-center text-danger m-5">
+    </div>
+  </span>
+</div>
+<script type="text/javascript">
+  var ilksayiElementi=document.getElementById("ilksayi");
+  var ikincisayiElementi=document.getElementById("ikincisayi");
+  var cevapInputElementi=document.getElementById("sonuc");
+  var emojiElementi=document.getElementById("emoji");
+  var rastgelesayi1;
+  var rastgelesayi2;
+  rastgeleSayiUretme();
+  function rastgeleSayiUretme(){
+    rastgelesayi1=Math.floor(Math.random()*100);
+    rastgelesayi2=Math.floor(Math.random()*100);
+    ilksayiElementi.innerText=rastgelesayi1;
+    ikincisayiElementi.innerText=rastgelesayi2;
+    cevapInputElementi.value;
+    if(kullanicinYazdigiCevap==)
+  }
+</script>
+</body>
+</html>

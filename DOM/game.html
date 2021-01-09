@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Oyun1</title>
+  <link rel="stylesheet" href="css\bootstrap.css">
+</head>
+<body>
+<div class="container">
+<h1 id="baslat" onclick="oyunubaslat()" class="text-center p-5 m-5" >Oyunu Baslat!</h1>
+
+<div class="row ">
+
+<div class="col-6 d-flex justify-content-center align-items-center flex-column">
+  <h2>oyuncu 1</h2>
+  <img id="zar1" src="1.png" width="200" alt="">
+</div>
+
+<div class="col-6 d-flex justify-content-center align-items-center flex-column">
+  <h2>oyuncu 2</h2>
+  <img id="zar2" src="2.png" width="200" alt="">
+</div>
+
+</div>
+
+<h4 id="sonuc" class="text-center p-3 text-warning"> </h4>
+
+</div>
+
+<script type="text/javascript">
+  function oyunubaslat(){
+var baslatelementi = document.querySelector("#baslat");
+var oyuncu1zar     = document.querySelector("#zar1");
+var oyuncu2zar     = document.querySelector("#zar2");
+var sonuc          = document.querySelector("#sonuc");
+var rastgelesayi1 = Math.floor( Math.random()*6)+1;
+var rastgelesayi2 = Math.floor( Math.random()*6)+1;
+
+var resimadresi1= rastgelesayi1 + ".png";
+oyuncu1zar.setAttribute("src", resimadresi1);
+
+var resimadresi2= rastgelesayi2 + ".png";
+oyuncu2zar.setAttribute("src", resimadresi2);
+
+if(rastgelesayi1>rastgelesayi2){
+  //oyunuc 1 kazandi
+  sonuc.innerText="oyuncu 1 Kazandi!"
+}else if( rastgelesayi2>rastgelesayi1){
+  //oyunuc 2 kazandi
+  sonuc.innerText="oyunuc 2 kazandi!"
+}else {
+  sonuc.innerText="oyun berabere"
+}
+
+}
+
+</script>
+
+
+
+</body>
+</html>

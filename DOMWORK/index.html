@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+  </head>
+  <body>
+      <button onclick="changeColor()">dark mode</button>
+    <h1 id="baslik">Merhabalar</h1>
+    <div class="aciklama">
+      Burasi Document Object Model calistigimiz sayfadir.
+    </div>
+    <br />
+    <input type="checkbox" />
+
+
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Javascript</li>
+    </ul>
+    <script type="text/javascript">
+    function changeColor(){
+      var button=document.querySelector("button");
+      button.classList.toggle("btn-danger");
+//document.querySelector("body").classList.toggle("bg-dark");
+//document.querySelector("body").classList.toggle("text-light");
+var naim=document.querySelector("body");
+if(naim.classList.contains("bg-dark")){
+  document.querySelector("button").innerText="dark mode";
+}else{
+  document.querySelector("button").innerText="light mode";
+}
+naim.classList.toggle("bg-dark");
+naim.classList.toggle("text-light");
+}
+    </script>
+  </body>
+</html>
